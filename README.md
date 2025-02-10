@@ -17,3 +17,15 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Run the testing and linting with `npm run test` and `npm run lint`.
+
+# Haritha's Solution for NextJS Coding Challenge
+
+* Refactored the codebase and created reusable components. The `page.tsx` file is now clearer and doesn't handle multiple responsibilities.
+* The `Home` component is no longer a client-side component.
+* Added `ItemProvider` to handle the state between different components.
+* Item count not getting updated issue fixed.
+* Fixed an issue where the item count in the Basket was not visible on smaller screen sizes.
+* The Grid class displays a single column on mobile screens and two columns on tablets.
+* Applied the 3A (Arrange, Act, Assert) testing practice in the test.tsx file.
+* Used `@testing-library/user-event` to handle click events on unit tests.
+* Added a strings.ts file to centralize the management of all static strings.
