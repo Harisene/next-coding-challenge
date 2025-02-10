@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "@/styles/Item.module.css";
 import { MouseEventHandler } from "react";
 
