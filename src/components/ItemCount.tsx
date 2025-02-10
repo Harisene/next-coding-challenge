@@ -2,7 +2,7 @@ import strings from "@/resources/strings";
 
 interface ItemCountProps {
   name: string;
-  count?: number;
+  count: number;
 }
 
 const ItemCount = ({ name, count = 0 }: ItemCountProps) => {
