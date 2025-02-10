@@ -28,4 +28,4 @@ Run the testing and linting with `npm run test` and `npm run lint`.
 * The Grid class displays a single column on mobile screens and two columns on tablets.
 * Applied the 3A (Arrange, Act, Assert) testing practice in the test.tsx file.
 * Used `@testing-library/user-event` to handle click events on unit tests.
-* Added a strings.ts file to centralize the management of all static strings.
+* Added a `strings.ts` file to centralize the management of all static strings.
