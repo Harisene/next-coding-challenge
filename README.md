@@ -29,4 +29,5 @@ Run the testing and linting with `npm run test` and `npm run lint`.
 * Fixed an issue where the item count in the Basket was not visible on smaller screen sizes.
 * Applied the **3A (Arrange, Act, Assert)** testing practice in the `test.tsx` file.
 * Used `@testing-library/user-event` to handle click events on unit tests.
+* Added additional assertions to the `test.tsx` file.
 * Added a `strings.ts` file to centralize the management of all static strings.
