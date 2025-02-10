@@ -40,7 +40,7 @@ const ItemProvider = ({ children }: PropsWithChildren) => {
   return (
     <ItemContext.Provider
       value={{
-        items: items,
+        items,
         itemCount,
         addToCart,
       }}
@@ -50,6 +50,12 @@ const ItemProvider = ({ children }: PropsWithChildren) => {
   );
 };
 
-export const useItem = () => useContext(ItemContext);
+export const useItem = () => {
+  const context = useContext(ItemContext);
+  if (!context) {
+    throw new Error("useItem must be used within an ItemProvider");
+  }
+  return context;
+};
 
 export default ItemProvider;
