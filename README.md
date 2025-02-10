@@ -27,7 +27,7 @@ Run the testing and linting with `npm run test` and `npm run lint`.
 * Integrated `ItemProvider` to manage state across multiple components.
 * Only the **chosen** items are displayed in the basket list.
 * Fixed an issue where the item count in the Basket was not visible on smaller screen sizes.
-* The `test.tsx` is file moved to `src/__tests__` folder. 
+* The `test.tsx` file is moved to `src/__tests__` folder. 
 * Applied the **3A (Arrange, Act, Assert)** testing practice in the `test.tsx` file.
 * Used `@testing-library/user-event` to handle click events on unit tests.
 * Added additional assertions to the `test.tsx` file.
