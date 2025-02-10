@@ -19,6 +19,9 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .basketContainer {
+    margin: auto;
+  }
   .basket {
     padding: 1rem 2.5rem;
   }

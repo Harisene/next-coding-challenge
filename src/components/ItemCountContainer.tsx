@@ -8,7 +8,7 @@ const ItemCountContainer = () => {
   const { items, itemCount } = useItem();
 
   return (
-    <div>
+    <div className={styles.basketContainer}>
       <button className={styles.basket}>Basket: {itemCount} items</button>
       {["Item 1", "Item 2", "Item 3", "Item 4"].map((itm) => {
         return (
