@@ -3,7 +3,7 @@ import ItemProvider from "@/providers/ItemProvider";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-describe("Home", () => {
+describe("Home Page", () => {
   beforeEach(() => {
     render(<Home />, { wrapper: ItemProvider });
   });

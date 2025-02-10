@@ -12,9 +12,9 @@ interface ItemProps {
 const Item = ({ index, name, onClick }: ItemProps) => {
   return (
     <button
+      aria-label="Add to basket"
       className={styles.card}
       onClick={onClick}
-      aria-label="Add to basket"
     >
       <h2>
         {name} <span>-&gt;</span>
