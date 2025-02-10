@@ -20,12 +20,13 @@ Run the testing and linting with `npm run test` and `npm run lint`.
 
 # Haritha's Solution for NextJS Coding Challenge
 
-* Refactored the codebase and created reusable components. The `page.tsx` file is now clearer and doesn't handle multiple responsibilities.
+* Fixed the issue where the item count was not updating.
+* The Grid class displays a single column on mobile screens and two columns on tablets.
+* Refactored the codebase and created reusable components. The `page.tsx` file is now cleaner and doesn't handle multiple responsibilities.
 * The `Home` component is no longer a client-side component.
 * Integrated `ItemProvider` to manage state across multiple components.
-* Fixed the issue where the item count was not updating.
+* Only the **chosen** items are displayed in the basket list.
 * Fixed an issue where the item count in the Basket was not visible on smaller screen sizes.
-* The Grid class displays a single column on mobile screens and two columns on tablets.
-* Applied the 3A (Arrange, Act, Assert) testing practice in the test.tsx file.
+* Applied the **3A (Arrange, Act, Assert)** testing practice in the `test.tsx` file.
 * Used `@testing-library/user-event` to handle click events on unit tests.
 * Added a `strings.ts` file to centralize the management of all static strings.
