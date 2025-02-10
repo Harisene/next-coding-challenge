@@ -1,15 +1,18 @@
 "use client";
 
 import { useItem } from "@/providers/ItemProvider";
-import ItemCount from "./ItemCount";
+import strings from "@/resources/strings";
 import styles from "@/styles/ItemCountContainer.module.css";
+import ItemCount from "./ItemCount";
 
 const ItemCountContainer = () => {
   const { items, itemCount } = useItem();
 
   return (
     <div className={styles.basketContainer}>
-      <button className={styles.basket}>Basket: {itemCount} items</button>
+      <button className={styles.basket}>
+        {strings.basket}: {itemCount} {strings.items}
+      </button>
       {["Item 1", "Item 2", "Item 3", "Item 4"].map((itm) => {
         return (
           <ItemCount

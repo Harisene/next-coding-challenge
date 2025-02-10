@@ -1,3 +1,5 @@
+import strings from "@/resources/strings";
+
 interface ItemCountProps {
   name: string;
   count?: number;
@@ -6,7 +8,7 @@ interface ItemCountProps {
 const ItemCount = ({ name, count = 0 }: ItemCountProps) => {
   return (
     <div key={name}>
-      {name} count: {count}
+      {name} {strings.count}: {count}
     </div>
   );
 };
