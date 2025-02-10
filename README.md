@@ -31,3 +31,4 @@ Run the testing and linting with `npm run test` and `npm run lint`.
 * Used `@testing-library/user-event` to handle click events on unit tests.
 * Added additional assertions to the `test.tsx` file.
 * Added a `strings.ts` file to centralize the management of all static strings.
+* Updated styles to improve responsiveness on mobile screens.
