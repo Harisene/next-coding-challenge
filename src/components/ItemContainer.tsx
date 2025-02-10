@@ -5,10 +5,10 @@ import styles from "@/styles/ItemContainer.module.css";
 import Item from "./Item";
 
 const Items = [
-  { item: "Item 1", name: "Foo" },
-  { item: "Item 2", name: "Bar" },
-  { item: "Item 3", name: "Baz" },
-  { item: "Item 4", name: "Qux" },
+  { id: "Item 1", name: "Foo" },
+  { id: "Item 2", name: "Bar" },
+  { id: "Item 3", name: "Baz" },
+  { id: "Item 4", name: "Qux" },
 ];
 
 const ItemContainer = () => {
@@ -16,13 +16,13 @@ const ItemContainer = () => {
 
   return (
     <div className={styles.grid}>
-      {Items.map((item) => {
+      {Items.map((item, index) => {
         return (
           <Item
-            key={item.item}
+            key={item.id}
+            index={index}
             name={item.name}
-            item={item.item}
-            onClick={() => addToCart(item.item)}
+            onClick={() => addToCart(item.id, item.name)}
           />
         );
       })}

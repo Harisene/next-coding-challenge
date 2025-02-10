@@ -7,7 +7,7 @@ interface ItemCountProps {
 
 const ItemCount = ({ name, count = 0 }: ItemCountProps) => {
   return (
-    <div key={name}>
+    <div key={name} role="status" aria-label="item-count">
       {name} {strings.count}: {count}
     </div>
   );

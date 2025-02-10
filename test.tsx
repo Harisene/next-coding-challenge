@@ -35,7 +35,7 @@ describe("Home", () => {
     expect(basketButton).toHaveTextContent("Basket: 1 items");
   });
 
-  it("renders a basket with 1 of item 1 and 2 of item 2", async () => {
+  it("renders a basket with 1 of Foo and 2 of Bars", async () => {
     // Arrange
     const user = userEvent.setup();
     const buttons = screen.getAllByRole("button", {
@@ -51,6 +51,13 @@ describe("Home", () => {
     const basketButton = screen.getByRole("button", {
       name: /Basket:/i,
     });
+    const items = screen.getAllByRole("status", {
+      name: /item-count/i,
+    });
     expect(basketButton).toHaveTextContent("Basket: 3 items");
+    expect(items[0]).toHaveTextContent(/Foo count: 1/i);
+    expect(items[1]).toHaveTextContent(/Bar count: 2/i);
+    expect(items[2]).toBeUndefined();
+    expect(items[3]).toBeUndefined();
   });
 });

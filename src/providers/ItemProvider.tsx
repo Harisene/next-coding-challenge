@@ -6,7 +6,7 @@ import { createContext, PropsWithChildren, useContext, useState } from "react";
 interface ContextValues {
   items: Item[];
   itemCount: number;
-  addToCart: (newItem: string) => void;
+  addToCart: (newItemId: string, newItemName: string) => void;
 }
 
 const initialValues: ContextValues = {
@@ -21,17 +21,20 @@ const ItemProvider = ({ children }: PropsWithChildren) => {
   const [items, setItems] = useState<Item[]>([]);
   const [itemCount, setItemCount] = useState(0);
 
-  const addToCart = (newItem: string) => {
+  const addToCart = (newItemId: string, newItemName: string) => {
     setItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.name === newItem);
+      const existingItem = prevItems.find((item) => item.id === newItemId);
       if (existingItem) {
         return prevItems.map((item) =>
-          item.name === newItem
+          item.id === newItemId
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-        return [...prevItems, { name: newItem, quantity: 1 }];
+        return [
+          ...prevItems,
+          { id: newItemId, name: newItemName, quantity: 1 },
+        ];
       }
     });
     setItemCount((prevCount) => prevCount + 1);

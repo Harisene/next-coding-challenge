@@ -4,12 +4,12 @@ import styles from "@/styles/Item.module.css";
 import { MouseEventHandler } from "react";
 
 interface ItemProps {
-  item: string;
+  index: number;
   name: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Item = ({ item, name, onClick }: ItemProps) => {
+const Item = ({ index, name, onClick }: ItemProps) => {
   return (
     <button
       className={styles.card}
@@ -17,9 +17,9 @@ const Item = ({ item, name, onClick }: ItemProps) => {
       aria-label="Add to basket"
     >
       <h2>
-        {item} <span>-&gt;</span>
+        {name} <span>-&gt;</span>
       </h2>
-      <p>{name}</p>
+      <p>Item {index + 1}</p>
     </button>
   );
 };

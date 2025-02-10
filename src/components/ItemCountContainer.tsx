@@ -14,7 +14,7 @@ const ItemCountContainer = () => {
         {strings.basket}: {itemCount} {strings.items}
       </button>
       {items.map((item) => (
-        <ItemCount key={item.name} name={item.name} count={item.quantity} />
+        <ItemCount key={item.id} name={item.name} count={item.quantity} />
       ))}
     </div>
   );
